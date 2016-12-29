@@ -1,4 +1,5 @@
 <?php
+
 return array(
     'module' => array(
         'MenuItem' => array(
