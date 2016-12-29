@@ -1,6 +1,9 @@
-# pacificnm-acl
+# pacificnm-menu-item
 
-Provides a lightweight and flexible access control list (ACL) implementation for privileges management.
+Provides menu items services and management for PacificNM.
 
-File issues at https://github.com/pacificnm/pacificnm-acl/issues
-Documentation is at https://github.com/pacificnm/pacificnm-acl/
+requires pacificnm-menu
+
+File issues at https://github.com/pacificnm/pacificnm-menu-item/issues
+
+Documentation is at https://github.com/pacificnm/pacificnm-menu-item

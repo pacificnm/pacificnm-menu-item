@@ -1,9 +1,10 @@
 <?php
+
 return array(
     'module' => array(
         'MenuItem' => array(
             'name' => 'MenuItem',
-            'version' => '1.0.3',
+            'version' => '1.0.4',
             'install' => array(
                 'require' => array(),
                 'sql' => 'sql/menu_item.sql'
