@@ -171,7 +171,7 @@ class MysqlMapper extends AbstractMysqlMapper implements MysqlMapperInterface
      */
     protected function filter($filter)
     {
-        if (array_key_exists('menuId', $filter)) {
+        if (array_key_exists('menuId', $filter) && $filter['menuId'] > 0) {
             $this->select->where(array(
                 'menu_item.menu_id = ?' => $filter['menuId']
             ));

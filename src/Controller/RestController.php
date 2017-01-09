@@ -116,11 +116,17 @@ class RestController extends AbstractRestfulController
      */
     public function getList($params)
     {
+       
+        
         $page = $this->params()->fromQuery('page', 1);
     
         $countPerPage = $this->params()->fromQuery('countPerPage', 25);
     
-        $filter = array();
+        $menuId = $this->params()->fromQuery('menuId', null);
+        
+        $filter = array(
+            'menuId' => $menuId
+        );
     
         $entitys = $this->service->getAll($filter);
     

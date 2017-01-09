@@ -4,7 +4,7 @@ return array(
     'module' => array(
         'MenuItem' => array(
             'name' => 'MenuItem',
-            'version' => '1.0.5',
+            'version' => '1.0.6',
             'install' => array(
                 'require' => array(),
                 'sql' => 'sql/menu_item.sql'
@@ -215,6 +215,10 @@ return array(
                                 'route' => 'menu-view',
                                 'useRouteMatch' => true,
                                 'pages' => array(
+                                    array(
+                                        'label' => 'New Item',
+                                        'route' => 'menu-item-create',
+                                        'useRouteMatch' => true,                                    ),
                                     array(
                                         'label' => 'Item',
                                         'route' => 'menu-item-view',

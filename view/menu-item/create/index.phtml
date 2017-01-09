@@ -20,92 +20,53 @@
 			</div>
 			<div class="box-body">
                 <?php echo $this->form()->openTag($this->form); ?>
+                
 				<?php echo $this->partial("partials/form-errors.phtml", array("errorMsg" => $this->form->getMessages())); ?>
 				
 				<div class="row">
 					<div class="col-xs-12 col-sm-8">
-            			<?php $element = $this->form->get('menuItemName'); ?>
-            			<div class="form-group <?php if($this->formElementErrors($element)) echo "has-error has-feedback" ?>">
-							<label class="control-label"><?php echo $element->getLabel() ?></label>
-            				<?php echo $this->formElement($element); ?>
-            				<?php if($this->formElementErrors($element)): ?>
-            					<span class="text-danger"><?php echo $this->formElementErrors($element) ?> </span>
-            				<?php endif; ?>
-            			</div>
-					</div>
+						<?php echo $this->formElementDisplay($this->form->get("menuItemName")); ?>
+            		</div>
 				</div>
 				
 				<div class="row">
 					<div class="col-xs-12 col-sm-6">
-            			<?php $element = $this->form->get('menuItemRoute'); ?>
-            			<div class="form-group <?php if($this->formElementErrors($element)) echo "has-error has-feedback" ?>">
-							<label class="control-label"><?php echo $element->getLabel() ?></label>
-            				<?php echo $this->formElement($element); ?>
-            				<?php if($this->formElementErrors($element)): ?>
-            					<span class="text-danger"><?php echo $this->formElementErrors($element) ?> </span>
-            				<?php endif; ?>
-            			</div>
-					</div>
+						<?php echo $this->formElementDisplay($this->form->get("menuItemRoute")); ?>
+            		</div>
 				</div>
 				
 				<div class="row">
 					<div class="col-xs-12 col-sm-4">
-            			<?php $element = $this->form->get('menuItemIcon'); ?>
-            			<div class="form-group <?php if($this->formElementErrors($element)) echo "has-error has-feedback" ?>">
-							<label class="control-label"><?php echo $element->getLabel() ?></label>
-            				<?php echo $this->formElement($element); ?>
-            				<?php if($this->formElementErrors($element)): ?>
-            					<span class="text-danger"><?php echo $this->formElementErrors($element) ?> </span>
-            				<?php endif; ?>
-            			</div>
-					</div>
+						<?php echo $this->formElementDisplay($this->form->get("menuItemIcon")); ?>
+            		</div>
 				</div>
 				
 				<div class="row">
 					<div class="col-xs-12 col-sm-4">
-            			<?php $element = $this->form->get('menuId'); ?>
-            			<div class="form-group <?php if($this->formElementErrors($element)) echo "has-error has-feedback" ?>">
-							<label class="control-label"><?php echo $element->getLabel() ?></label>
-            				<?php echo $this->formElement($element); ?>
-            				<?php if($this->formElementErrors($element)): ?>
-            					<span class="text-danger"><?php echo $this->formElementErrors($element) ?> </span>
-            				<?php endif; ?>
-            			</div>
-					</div>
+						<?php echo $this->formElementDisplay($this->form->get("menuId")); ?>
+            		</div>
 				</div>
 				
 				<div class="row">
 					<div class="col-xs-12 col-sm-2">
-            			<?php $element = $this->form->get('menuItemOrder'); ?>
-            			<div class="form-group <?php if($this->formElementErrors($element)) echo "has-error has-feedback" ?>">
-							<label class="control-label"><?php echo $element->getLabel() ?></label>
-            				<?php echo $this->formElement($element); ?>
-            				<?php if($this->formElementErrors($element)): ?>
-            					<span class="text-danger"><?php echo $this->formElementErrors($element) ?> </span>
-            				<?php endif; ?>
-            			</div>
+						<?php echo $this->formElementDisplay($this->form->get("menuItemOrder")); ?>
+            		</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-xs-12">
+						<?php echo $this->formElementDisplay($this->form->get("menuItemActive")); ?>
 					</div>
 				</div>
 				
 				<div class="row">
 					<div class="col-xs-12">
-						<?php $element = $this->form->get('menuItemActive'); ?>
-						<div class="form-group <?php if($this->formElementErrors($element)) echo "has-error has-feedback" ?>">
-							<?php echo $this->formElement($element); ?>
-							<label class="control-label"><?php echo $element->getLabel() ?></label>
-							<?php if($this->formElementErrors($element)): ?>
-							<span class="text-danger"><?php echo $this->formElementErrors($element) ?></span>
-							<?php endif; ?>
-						</div>
+						<?php echo $this->formElementDisplay($this->form->get("submit")); ?>
 					</div>
 				</div>
 				
-				<div class="row">
-					<div class="col-xs-12">
-						<?php echo $this->formSubmit($this->form->get("submit")); ?>
-					</div>
-				</div>
-				<?php echo $this->formElement($this->form->get('menuItemId')); ?>
+				<?php echo $this->formElementDisplay($this->form->get("menuItemId")); ?>
+				
 				<?php echo $this->form()->closeTag(); ?>
 			</div>
 		</div>
